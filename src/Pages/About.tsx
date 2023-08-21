@@ -3,7 +3,6 @@ import classes from "./About.module.css"
 const About: React.FC = () => {
     return (
         <main className={classes.about}>
-            {/* <h1>About</h1> */}
             <div className={classes.mypic}>
                 <img src="/mypic.jpg" alt="mypic" />
             </div>
@@ -23,6 +22,14 @@ const About: React.FC = () => {
                 <div className={classes.flexk}>
                     <div>WhatsApp</div>
                     <a href="https://wa.me/919518297071" target="_blank">+91&nbsp;9518297071</a>
+                </div>
+                <div className={classes.flexk}>
+                    <div>GitHub</div>
+                    <a href="https://github.com/KrishnKumar-95" target="_blank">GitHub</a>
+                </div>
+                <div className={classes.flexk}>
+                    <div>This Project ( Source Code )</div>
+                    <a href="https://github.com/KrishnKumar-95/React-pet-store-deep-dive" target="_blank">Pet Shop</a>
                 </div>
             </div>
         </main>

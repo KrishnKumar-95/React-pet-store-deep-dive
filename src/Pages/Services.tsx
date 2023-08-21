@@ -10,11 +10,11 @@ const Services: React.FC = () => {
     const [user] = useAuthState(auth)
     const navigate = useNavigate()
 
-    // useEffect(() => {
-    //     if (!user) {
-    //         navigate("/login")
-    //     }
-    // },[])
+    useEffect(() => {
+        if (!user) {
+            navigate("/login")
+        }
+    },[])
 
     return (
         <main className={classes.services}>

@@ -1,31 +1,39 @@
-import { useAuthState } from "react-firebase-hooks/auth"
-import { auth } from "../components/Config/FirebaseConfig"
-import { useNavigate } from "react-router-dom"
-import { useEffect } from "react"
+import { Link, useNavigate } from "react-router-dom"
+import classes from "./Services.module.css"
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../components/Config/FirebaseConfig";
+import { useEffect } from "react";
 
 const Home = () => {
 
-    const [user, loading, error] = useAuthState(auth)
-    const navigate =  useNavigate()
+    const [user] = useAuthState(auth)
+    const navigate = useNavigate()
 
     useEffect(() => {
         if (!user) {
             navigate("/login")
         }
-    },[user])
+    },[])
 
     return (
-        <div>
-            {
-                loading ?
-                    (<div>Loading...</div>) :
-                    (
-                        user
-                            ? <p>Show Logout button</p>
-                            : <button onClick={() => navigate('/login')}>Login</button>
-                    )
-            }
-        </div>
+        <main className={classes.services}>
+            <section className={classes.left}>
+                <h2>Pet register</h2>
+                <div>
+                    <Link to='/petregister'>
+                        <img src="/doggo.jpg" alt="doggo" />
+                    </Link>
+                </div>
+            </section>
+            <section className={classes.right}>
+                <h2>All services</h2>
+                <div>
+                    <Link to="/all-services" >
+                        <img src="/dogsalon.jpg" alt="doggo" />
+                    </Link>
+                </div>
+            </section>
+        </main>
     )
 }
 
