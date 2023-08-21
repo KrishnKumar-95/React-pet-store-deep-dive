@@ -1,0 +1,36 @@
+.about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flexk {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.flexParent {
+    margin-top: 3rem;
+    width: 60vw;
+}
+
+.mypic {
+    margin-top: 3rem;
+}
+
+.mypic img{
+    width: 125px;
+    border-radius: 50%;
+    aspect-ratio: 2/2;
+    object-fit: cover;
+}
+
+.about h1 {
+    text-align: center;
+    color: #666666;
+    margin-top: 1rem;
+}

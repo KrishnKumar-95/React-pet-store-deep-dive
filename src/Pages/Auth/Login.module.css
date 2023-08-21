@@ -1,3 +1,33 @@
-.login-Form-Container{
-    
+.selector {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+    transition: ease-in 0.4s;
 }
+
+.google,
+.manual {
+    padding: 7px 17px;
+    border-radius: 50px;
+    width: 20vw;
+    text-align: center;
+    background-color: #5d54e1;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* .manual {
+    padding: 7px 17px;
+    border-radius: 50px;
+    width: 20vw;
+    text-align: center;
+    background-color: #666666;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    cursor: pointer;
+} */
