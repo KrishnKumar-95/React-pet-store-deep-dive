@@ -8,6 +8,10 @@
     background-color: #5d54e1;
     position: sticky;
     top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
     z-index: 2;
 }
 
@@ -20,7 +24,7 @@
 .navbar ul li{
     margin: 10px 5px;
 }
-.navbar ul li a {
+.navbar ul li a, .logout button {
     text-decoration: none;
     margin: 2px 5px;
     font-size: 18px;
@@ -31,9 +35,13 @@
     background-color: #554dcf;
 }
 
-.navbar ul li a:hover {
+.navbar ul li a:hover , .logout button:hover {
     background-color: #847df1;
     letter-spacing: 2px;
     font-weight: bold;
     transition: ease-in-out 0.3s;
+}
+
+.logout button {
+    border: none;
 }
